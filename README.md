@@ -22,7 +22,7 @@ remote desktop product.
 ./scripts/mac-quickstart.sh --public   # plus a temporary address for your phone
 ```
 
-It installs what's missing, builds, starts the relay on `localhost:8080`, enrolls the
+It installs what's missing, builds, starts the relay on a free local port, enrolls the
 Mac and starts the agent. The manual steps follow.
 
 ## Run the relay
