@@ -15,6 +15,16 @@ remote desktop product.
 | Android app | Native viewer (MediaCodec). | Planned |
 | Web app | The portal and viewer here, extended to parity. | Started |
 
+## Quick start on a Mac
+
+```sh
+./scripts/mac-quickstart.sh            # this Mac only
+./scripts/mac-quickstart.sh --public   # plus a temporary address for your phone
+```
+
+It installs what's missing, builds, starts the relay on `localhost:8080`, enrolls the
+Mac and starts the agent. The manual steps follow.
+
 ## Run the relay
 
 ```sh
