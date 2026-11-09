@@ -1,0 +1,6 @@
+[workspace]
+resolver = "2"
+members = ["relay", "agent"]
+
+[profile.release]
+opt-level = 3
