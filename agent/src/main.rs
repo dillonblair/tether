@@ -106,6 +106,13 @@ fn run(extra: &[String]) {
             .expect("tokio runtime")
             .block_on(tunnel(c, port, p));
     });
+    // The streaming server's own start-up lines print a loopback sign-in link that isn't
+    // the way in here, so only its warnings are shown (RUST_LOG overrides this).
+    let _ = env_logger::Builder::from_env(
+        env_logger::Env::default().default_filter_or("warn,tether_agent=info"),
+    )
+    .try_init();
+    println!("Host agent running. Connect from the Tether page at {}", cfg.relay);
     let mut args = vec![
         "--addr=127.0.0.1".to_string(),
         format!("--port={port}"),

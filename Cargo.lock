@@ -1776,6 +1776,7 @@ name = "tether-agent"
 version = "0.1.0"
 dependencies = [
  "dirs",
+ "env_logger",
  "futures-util",
  "gethostname 0.5.0",
  "getrandom 0.3.4",
